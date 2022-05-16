@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.discordapp.com/attachments/974706125226270760/974706809501794334/style.css" rel="stylesheet" crossorigin="anonymous">
+        <link rel="icon" href="/img/icon.png">
+        <title>Minecraft Portable Download Site</title>
+    </head>
+    <body>
+        <div id="toppanel">
+        <div id="logo">
+            <a href="/" border="0">
+                <img alt="Logo" src="https://cdn.discordapp.com/attachments/974706125226270760/974706351253114921/logo.png" border="0" width="175px" height="auto">
+            </a>
+        </div>
+        </div>
+        <div id="content">
+            <center>
+                <h1>
+                    <img alt="Logo" src="https://cdn.discordapp.com/attachments/974706125226270760/974706351253114921/logo.png" width="500px" height="auto">
+                </h1>
+                <b><i>Experience a portable version of Minecraft Legacy in any computer!</i></b>
+                <br>
+            </center>
+
+            <h2>About this project</h2>
+            We provide portable version of Minecraft Legacy (Minecraft Vanilla 1.5.2 and lower).<br>
+            Here are some images of Minecraft Portable 1.5.2:<br>
+            <br>
+            <img width="550" height="auto" src="https://cdn.discordapp.com/attachments/974706125226270760/974706350217109544/1.png">
+            <br>
+            <br>
+            <img width="550" height="auto" src="https://cdn.discordapp.com/attachments/974706125226270760/974706350477176872/2.png">
+
+            <h2>How does it work?</h2>
+            Basically it based on how does Minecraft run. Minecraft is coded on Java, so just run it using Java. In Minecraft Launcher, you will need to press "Play" button to play. The launcher will run a Java command to run Minecraft located in AppData. We just take the Minecraft files there and make a small batch file to run it portable. Here is a command that we use to run Minecraft:<br>
+            <pre>java -Xms512m -Xmx1g -Djava.library.path=natives/ -cp "minecraft.jar" net.minecraft.client.Minecraft</pre><br>
+            Some Java libraries are required to run Minecraft, they are LWJGL. "LWJGL is a Java library that enables cross-platform access to popular native APIs useful in the development of graphics (OpenGL, Vulkan), audio (OpenAL) and parallel computing (OpenCL) applications. This access is direct and high-performance, yet also wrapped in a type-safe and user-friendly layer, appropriate for the Java ecosystem." - <a href="https://www.lwjgl.org/" target="_blank">LWJGL Homepage</a>. The game won't work if we don't let the game use the libraries. So, in the run command, we have to integrate libraries by change the command from <code>"minecraft.jar"</code> to:<br>
+            <pre>"minecraft.jar;libs\lwjgl\2.9.0\lwjgl-2.9.0.jar;libs\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar"</pre>
+            <pre>:: Minecraft 1.5.2 uses LWJGL 2.9.0</pre><br>
+            Some parameters are needed, too. For example, <code>-username</code> or <code>-uuid</code> is needed to login to offline account (Online account coming soon). Add these parameters at the end of the command.<br>
+            I know no one will read this :)<br>
+
+            <h2>Disclaimer</h2>
+            I don't own any resource in this page, except the brand (Minecraft Portable Download Site). I also don't own anything in the pack, the Minecraft version I used are Vanilla and official (Except Alpha versions, I need to modify them to allow users to join multiplayer servers). This project may against Mojang Studios EULA, Xbox Game Studios and Microsoft Corporation for provide Minecraft free without their official launcher. That's why I only provide Minecraft Legacy not newer version. However, these versions may be affected by Log4Shell exploit. "Log4Shell is a software vulnerability in Apache Log4j 2, a popular Java library for logging error messages in applications. The vulnerability, published as CVE-2021-44228, enables a remote attacker to take control of a device on the internet if the device is running certain versions of Log4j 2" - <a href="https://www.dynatrace.com/" target="_blank">Dynatrace</a> (Search in the internet for more information). Use this project and its products at your own risk!<br>
+            
+            <h2>Downloads</h2>
+            <b>Minecraft 1.5.2</b><br>
+            - Vanilla Pack (Original): <a href="https://www.dropbox.com/s/3ygfaofapo5moa4/mc1.5.2vanilla.zip?dl=1" target="_blank">Download</a><br>
+            <b>Java Portable</b><br>
+            Locate this pack in your Minecraft Portable folder to use it!<br>
+            - Java Runtime Environment 1.8.0 (jre1.8.0_333): <a href="https://www.dropbox.com/s/6coji1tx91rf2di/jre.zip?dl=1" target="_blank">Download</a><br>
+
+            <h2>Credits</h2>
+            All assets, games and website theme are from Mojang Studios, Xbox Game Studios and Microsoft Corporation.
+        </div>
+        <div id="footer">
+            <div>Copyright © {{year}} Minecraft Portable Development Team. Not affiliated with Mojang Studios.</div>
+            <div>
+                Minecraft is a great game. Purchase at the 
+                <a href="https://minecraft.net" target="_blank">Minecraft Official Website</a>
+                 for better experience!
+            </div>
+        </div>
+
+        <br>
+
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4CCVDC3NBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-4CCVDC3NBN');
+        </script>
+    </body>
+</html>
